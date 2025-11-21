@@ -1,0 +1,15 @@
+enum Role {
+  USER
+  ADMIN
+}
+
+type Account {
+  accountId: String!
+  accountCode: String!
+  role: Role!
+  accountName: String!
+}
+
+type Query {
+  accounts: [Account!]
+}

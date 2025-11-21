@@ -1,0 +1,13 @@
+# codegen.yml
+schema: "./src/app/api/graphql/schema.graphql"
+documents: "./src/_lib/graphql/doqument.graphql"
+generates:
+  ./src/_lib/graphql/generated.ts:
+    plugins:
+      - "typescript"
+      - "typescript-operations"
+      - "typescript-urql"
+      - "named-operations-object"
+    config:
+      mappers:
+        Role: "@prisma/client#Role"

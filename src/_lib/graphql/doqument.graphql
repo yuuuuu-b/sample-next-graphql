@@ -1,0 +1,12 @@
+fragment Account on Account {
+  accountId
+  accountCode
+  accountName
+  role
+}
+
+query accounts {
+  accounts {
+    ...Account
+  }
+}
